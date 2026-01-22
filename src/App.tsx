@@ -2,10 +2,10 @@
 import ListGroup from "./ListGroup";
 
 function App() {
-   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+   let items = ["Kigali", "Musanze", "Rubavu", "Huye", "Nyagatare"];
   return (
     <div className="App">
-      <h1>My first app</h1>
+      <h1>List of Cities</h1>
       <ListGroup items={items} heading="Cities"/>
     </div>
   );
