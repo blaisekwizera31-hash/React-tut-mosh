@@ -5,8 +5,8 @@ interface Props {
 
 }
 
-function ListGroup(props: Props) {
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+function ListGroup({items, heading}: Props) {
+   
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
