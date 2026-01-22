@@ -1,7 +1,7 @@
 import React from "react";
 function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-let selectedIndex = -1;
+let selectedIndex = 0;
   const handleClick = (event: React.MouseEvent) => console.log(event);
 
   return (
