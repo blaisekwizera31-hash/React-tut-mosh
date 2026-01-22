@@ -1,4 +1,4 @@
-import React from "react";
+
 function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
   let selectedIndex = 1;
@@ -17,7 +17,7 @@ function ListGroup() {
                 : "list-group-item"
             }
             key={item}
-            onClick={}
+            onClick={() => {selectedIndex = index}}
           >
             {item}
           </li>
