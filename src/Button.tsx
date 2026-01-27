@@ -3,9 +3,10 @@ import React from "react";
 interface Props {
   children: string;
   onClick?: () => void;
+  color : string;
 }
-function Button({children, onClick}: Props) {
-  return <button className="btn btn-primary" onClick = {
+function Button({children, onClick, color}: Props) {
+  return <button className={`btn btn-${color}`} onClick = {
     onClick
   }>{children}</button>;
 }
