@@ -4,8 +4,6 @@ function App() {
   return (
     <div>
       <Alert>
-
-        Hello world
         <button type="button" className="btn btn-primary">
           Primary
         </button>
