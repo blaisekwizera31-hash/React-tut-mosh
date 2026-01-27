@@ -1,10 +1,12 @@
 import ListGroup from "./ListGroup";
 
 function App() {
-  return;
-  <div>
+  return(
+    <div>
     <ListGroup />
-  </div>;
+  </div>
+  )
 }
+  
 
 export default App;
