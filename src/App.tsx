@@ -1,6 +1,12 @@
+import React from "react";
+import Button from "./Button";
 
-function App (){
-  <div>
-
-  </div>
+function App() {
+  return (
+    <div>
+      <Button />
+    </div>
+  );
 }
+
+export default App;
