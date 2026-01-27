@@ -4,7 +4,7 @@ import Button from "./Button";
 function App() {
   return (
     <div>
-      <Button />
+      <Button children="Click me" onClick = {() => console.log("Clicked!")}></Button>
     </div>
   );
 }
