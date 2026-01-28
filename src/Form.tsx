@@ -18,8 +18,8 @@ const Form = () => {
         <label htmlFor="category" className="form-label">
           Category
         </label> 
-        <select name="" id="">
-           <option value="All">All</option>
+        <select  className="form-select" aria-label="Default select example" id="">
+          <option value="All">All</option>
           <option value="Utilities">Utilities</option>
           <option value="Groceries">Groceries</option>
           <option value="Entertainment">Entertainment</option>
