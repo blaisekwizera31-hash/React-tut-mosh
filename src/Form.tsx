@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const Form = () => {
   return (
-    <div>Form</div>
-  )
-}
+    <form action="">
+      <div className="mb-3">
+        <label htmlFor="" className="form-label"></label>
+        <input type="text" className="form-control" />
+      </div>
+    </form>
+  );
+};
 
-export default Form
+export default Form;
