@@ -22,7 +22,13 @@ const expenseList = ({expenses}:Props) => {
             </tr>
         </thead>
   <tbody>
-      
+      {expenses.map(expense => 
+      <tr key={expense.id}>
+        <td>{expense.description}</td>
+        <td>{expense.amount}</td>
+        <td>{expense.category}</td>
+        <td><button className="btn btn-outline-danger">Delete</button></td>
+      </tr>)}
   </tbody>
     </table>
   )
