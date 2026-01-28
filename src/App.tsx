@@ -13,6 +13,7 @@
 import { useState } from "react";
 import ExpenseList from "./assets/expense-tracker/components/expenseList";
 import Form from "./Form";
+import Filter from "./assets/expense-tracker/Filter";
 const categories = ["Utilities", "Groceries", "Entertainment"];
 
 const App = () => {
@@ -48,6 +49,7 @@ const App = () => {
         <Form></Form>
       </div>
       <div>
+        <Filter onSelectCategory={(category) => console.log(category)} />
         <ExpenseList
           expenses={expenses}
           onDelete={(id) => setExpenses(expenses.filter((e) => e.id !== id))}
