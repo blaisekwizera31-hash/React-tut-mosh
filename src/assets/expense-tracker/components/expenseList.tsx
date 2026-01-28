@@ -1,11 +1,16 @@
-
+interface Expense{
+    id: number;
+    description: string;
+    amount: number;
+    category: string;
+}
 
 
 interface Props{
-   expenses: string[] 
+   expenses: Expense[] 
 }
 
-const expenseList = () => {
+const expenseList = ({expenses}:Props) => {
   return (
     <table className="table table-bordered">
         <thead>
@@ -17,7 +22,7 @@ const expenseList = () => {
             </tr>
         </thead>
   <tbody>
-
+      
   </tbody>
     </table>
   )
