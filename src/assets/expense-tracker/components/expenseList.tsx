@@ -1,5 +1,10 @@
 
 
+
+interface Props{
+   expenses: string[] 
+}
+
 const expenseList = () => {
   return (
     <table className="table table-bordered">
