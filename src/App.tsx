@@ -15,6 +15,7 @@ import ExpenseList from "./assets/expense-tracker/components/expenseList";
 import Form from "./Form";
 import Filter from "./assets/expense-tracker/Filter";
 const categories = ["Utilities", "Groceries", "Entertainment"];
+export default categories;
 
 const App = () => {
   const [expenses, setExpenses] = useState([
