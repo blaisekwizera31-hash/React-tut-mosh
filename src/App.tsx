@@ -12,7 +12,7 @@
 
 import { useState } from "react";
 import ExpenseList from "./assets/expense-tracker/components/expenseList";
-
+const categories = ["Utilities", "Groceries", "Entertainment"];
 
 const App = () => {
   const [expenses, setExpenses] = useState([
@@ -21,13 +21,13 @@ const App = () => {
       id: 1,
       description: "aaa",
       amount: 100,
-      category: "Utilities",
+      category: categories[0],
     },
     {
       id: 2,
       description: "bbb",
       amount: 200,
-      category: "Utilities",
+      category: categories[1],
     },
     {
       id: 3,
