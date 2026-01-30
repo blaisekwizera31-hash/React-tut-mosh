@@ -62,3 +62,15 @@
 // };
 
 // export default App;
+import
+
+const input = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  if(inputRef.current) inputRef.current.focus();
+  return (
+    
+    <input ref={inputRef} id="description" type="text" className="form-control" />
+  )
+}
+
+export default input
