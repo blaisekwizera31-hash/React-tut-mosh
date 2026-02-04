@@ -8,7 +8,12 @@ const App = () => {
   })
   return (
     <div>
-      <select className="form-select"></select>
+      <select className="form-select">
+        <option value="">household</option>
+        <option value="">clothing</option>
+        <option value="">prod1</option>
+        <option value="">prod2  </option>
+      </select>
       <ProductList></ProductList>
     </div>
   )
