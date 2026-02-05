@@ -8,7 +8,7 @@ const ProductList = () => {
         setProducts(['Product 1', 'Product 2', 'Product 3']);
     }, [])
   return (
-    <div>ProductList</div>
+    <div>ProductList</div>    
   )
 }
 
