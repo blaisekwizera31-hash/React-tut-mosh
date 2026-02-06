@@ -33,13 +33,25 @@ const App = () => {
   }, []);
 
   const deleteUser = (user: User) => {
+    const originalUsers = [...users];
     setUsers(users.filter((u) => u.id !== user.id));
+    axios
+      .delete("https://jsonplaceholder.typicode.com/users/ " + user.id)
+      .catch((error) => {
+        setError(error);
+        setUsers(originalUsers);
+      });
   };
+  const addUser = () =>{
+    const newUser = {id:0, name: "Mosh", email: "mosh@gmail.com"}
+    setUsers([...users, newUser])
+  }
   return (
     <>
       {error && <p className="text-danger">{error}</p>}
 
       {isLoading && <div className="spinner-border"></div>}
+      <button className="btn btn-primary mb-3" onClick={addUser}>Add data</button>
       <div>
         <ul className="list-group">
           {users.map((user) => (
@@ -62,7 +74,14 @@ const App = () => {
               className="list-group-item d-flex justify-content-between"
             >
               {user.email}{" "}
-              <button className="btn btn-outline-danger">Delete</button>
+              <button
+                className="btn btn-outline-danger"
+                onClick={() => {
+                  deleteUser(user);
+                }}
+              >
+                Delete
+              </button>
             </li>
           ))}
         </ul>
