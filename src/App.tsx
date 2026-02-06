@@ -9,25 +9,32 @@ interface User {
 const App = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [error, setError] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+
   useEffect(() => {
     const controller = new AbortController();
 
+    setLoading(true);
     axios
       .get<User[]>("https://jsonplaceholder.typicode.com/users ", {
         signal: controller.signal,
       })
-      .then((res) => setUsers(res.data))
+      .then((res) => {
+        setUsers(res.data);
+        setLoading(false);
+      })
+
       .catch((error) => {
         if (error instanceof CanceledError) return;
         setError(error.message);
       });
-    document.title = "first react app";
 
     return () => controller.abort();
   }, []);
   return (
     <>
-      <p className="text-danger">{error}</p>
+      {error && <p className="text-danger">{error}</p>}
+      {isLoading && <div className="spinner-border"></div>}
       <div>
         <ul>
           {users.map((user) => (
