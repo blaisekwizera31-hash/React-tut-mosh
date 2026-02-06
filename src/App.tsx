@@ -1,9 +1,14 @@
-import React from 'react'
-
+import axios from "axios";
+import { useEffect, useState } from "react";
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  const [users, setUsers] = useState([]);
 
-export default App
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/users ")
+      .then((res) => console.log(res));
+  });
+  return <div>App</div>;
+};
+
+export default App;
