@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import apiClient, { CanceledError } from "./services/api-client";
-import userService, { type User } from "./services/user-service";
+
+import apiClient from "./services/api-client";
+import  { type User } from "./services/user-service";
 import useUsers from "./hooks/useUsers";
 
 const App = () => {

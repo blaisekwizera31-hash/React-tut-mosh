@@ -1,22 +1,23 @@
-import apiClient from "./api-client";
-export interface User {
-  id: number;
-  name: string;
-  email: string;
-}
 
-class UserService {
-  getAllUsers() {
+import create from "./http-service"
+class HttpService {
+  endpoint: string;
+  constructor(endpoint: string) {
+    this.endpoint = endpoint;
+  }
+  getAll<T>() {
     const controller = new AbortController();
-    const request = apiClient.get<User[]>("/users", {
+    const request = apiClient.get<T[]>(this.endpoint, {
       signal: controller.signal,
     });
     return { request, cancel: () => controller.abort() };
   }
+  delete(id: number) {
+    return apiClient.delete(this.endpoint + "/" + id);
+  }
 }
+const create = (endpoint: string) => new HttpService(endpoint);
 
-export default new UserService();
 
-
-  
-  
+export default create('/users')
+       
